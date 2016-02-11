@@ -14,6 +14,9 @@ namespace Vuforia
     public class DefaultTrackableEventHandler : MonoBehaviour,
                                                 ITrackableEventHandler
     {
+
+
+		public static bool isDetected = false;
         #region PRIVATE_MEMBER_VARIABLES
  
         private TrackableBehaviour mTrackableBehaviour;
@@ -82,7 +85,7 @@ namespace Vuforia
             {
                 component.enabled = true;
             }
-
+			isDetected = true;
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
         }
 
@@ -103,7 +106,7 @@ namespace Vuforia
             {
                 component.enabled = false;
             }
-
+			isDetected = false;
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
         }
 

@@ -6,7 +6,7 @@ public class TextMenu : MonoBehaviour {
 
 	public static int flag = 0;
 	bool flagInfoActive = false;
-	public Canvas canvas;
+
 	
 	// Use this for initialization
 	void Start () {

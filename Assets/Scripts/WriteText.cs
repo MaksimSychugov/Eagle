@@ -4,12 +4,18 @@ using UnityEngine.UI;
 
 public class WriteText : MonoBehaviour {
 
-	string msg1 ="Объект №1\n" +
+	string[] msg = {"Объект №1\n" +
 		"Описание:\n" +
-		"Левый";
-	string msg2 ="Объект №2\n" +
+		"Левый белый куб на 3 этаже",
+	   "Объект №2\n" +
 		"Описание:\n" +
-			"Правый";
+		"Правый белый куб на 3 этаже",
+		"Объект №3\n" +
+		"Описание:\n" +
+		"Левый белый куб на 2 этаже",
+		"Объект №4\n" +
+		"Описание:\n" +
+		"Правый белый куб на 1 этаже"	};
 	Text tx;
 	// Use this for initialization
 	void Start () {
@@ -28,10 +34,10 @@ public class WriteText : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		switch (TextMenu.flag) {
-			case 1: tx.text = msg1; break;
-			case 2: tx.text = msg2; break;
-		}
+
+		tx.text = msg [TextMenu.flag];
+		
+
 		/*if (TextMenu.flag == 1) {
 			//tx.text = msg;
 			StartCoroutine("Write");
